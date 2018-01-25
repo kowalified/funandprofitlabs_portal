@@ -1,0 +1,26 @@
+{% extends 'layouts/app.html' %}
+
+{% block body %}
+<br>
+<br>
+<div class="container">
+    <div class="row align-items-center">
+            <div class="col-1"></div>
+        <div class="col-md-auto">
+            <br>
+            <br>
+            <br>
+            <br>
+            <div style="font-family: 'Lobster', cursive; font-size: 58px; text-align: right;">5<i class="fa fa-star" aria-hidden="true"></i> Consulting</div>
+            <div style="font-family: 'Roboto', sans-serif; font-size: 28px; text-align: right;">Department of Human Resources</div>
+        </div>
+        <div class="col-md-auto">
+            <br>
+            <br>
+            <br>
+            <br>
+            <p><div style="text-align: left;"><a class="btn btn-outline-success btn-lg" href="{{ url_for('user.signup') }}" role="button"> I'm A New Employee</a></div></p>
+            <div style="text-align: left;"><a class="btn btn-outline-secondary btn-lg" href="{{ url_for('user.login') }}" role="button">  I'm An Existing Employee</a></div>
+        </div>
+      </div>
+{% endblock %}

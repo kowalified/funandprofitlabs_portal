@@ -1,0 +1,71 @@
+{% extends 'layouts/login.html' %}
+{% import 'macros/form.html' as f with context %}
+
+{% block title %}Sign in to access your account{% endblock %}
+
+{% block body %}
+<div class="container">
+    <div class="row">
+      <div class="col-2"></div>
+<div class="col-6">
+    <div class="card">
+        <div class="card-header">
+          Employee Login
+        </div>
+        <div class="card-body">
+            {% call f.form_tag('user.login') %}
+            <div class="form-group">
+                <label for="formGroupInput">First name</label>
+                <input type="text" class="form-control" id="formGroupInput" placeholder="Enter First Name" name = "studentname">
+                <small id="firstnameHelp" class="form-text text-muted">How should the proctors address you?</small>
+              </div>
+            <div class="form-group">
+              <label for="InputEmail">Email address</label>
+              <input type="email" class="form-control" id="InputEmail1" aria-describedby="emailHelp" placeholder="Enter email" name = "studentemail">
+              <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+            </div>
+            <div class="form-group">
+                <label for="FormControlSelect">Select your student number</label>
+                <select class="form-control" id="FormControlSelect" name = "studentnumber">
+                  <option>1</option>
+                  <option>2</option>
+                  <option>3</option>
+                  <option>4</option>
+                  <option>5</option>
+                  <option>6</option>
+                  <option>7</option>
+                  <option>8</option>
+                  <option>9</option>
+                  <option>10</option>
+                  <option>11</option>
+                  <option>12</option>
+                  <option>13</option>
+                  <option>14</option>
+                  <option>15</option>
+                  <option>16</option>
+                  <option>17</option>
+                  <option>18</option>
+                  <option>19</option>
+                  <option>20</option>
+                  <option>21</option>
+                  <option>22</option>
+                  <option>23</option>
+                  <option>24</option>
+                  <option>25</option>
+                  <option>26</option>
+                  <option>27</option>
+                  <option>28</option>
+                  <option>29</option>
+                  <option>30</option>
+                  <option>31</option>
+                  <option>32</option>
+                </select>
+              </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        {% endcall %}
+        </div>
+      </div>
+  </div>
+</div>
+</div>
+{% endblock %}

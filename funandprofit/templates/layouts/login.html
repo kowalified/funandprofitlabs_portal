@@ -1,0 +1,11 @@
+{% extends 'layouts/base.html' %}
+
+{% block header %}
+  <a href="{{ url_for('page.home') }}">
+      <div style="font-family: 'Lobster', cursive; font-size: 30px; padding-left:1em">5<i class="fa fa-star" aria-hidden="true"></i></div>
+  </a>
+{% endblock %}
+
+{% block footer %}
+  <li><a href="{{ url_for('user.signup') }}">Create your HR profile today</a></li>
+{% endblock %}

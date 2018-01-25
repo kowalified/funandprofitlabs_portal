@@ -1,0 +1,71 @@
+{% extends 'layouts/app.html' %}
+
+<head>
+{{ super() }}
+
+<script>
+  setInterval(function() {
+      $.getJSON("portal/refreshmoney",
+              function(data) {
+                  $('#userMoney').text(data.user_money);
+              });
+}, 10000);
+</script>
+
+</head>
+
+{% block body %}
+<div class="container">
+<div class="row">
+    <div class="col-9">
+        <div class="card">
+            <h5 class="card-header"><i class="fa fa-inbox" aria-hidden="true"></i>&nbsp {{ user.first_name }}'s Inbox</h5>
+            <div class="card-body">
+                <div id="div1"></div>
+            </div>
+          </div> 
+    </div>
+
+
+
+    <div class="col-3">
+
+        <div class="card">
+            <div class="card-header">
+              HR Tools and Resources
+            </div>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item"><div id="moneySection"><center><h2><i class="fa fa-university" aria-hidden="true"></i>
+ = <i class="fa fa-eur" aria-hidden="true"></i>
+                <span id="userMoney">{{ user.money }}</span></h2></center></div></li>
+              <li class="list-group-item"><button type="button" class="btn btn-danger btn-block helpButton">I need help</button></li>
+              <li class="list-group-item"><button type="button" class="btn btn-success btn-block finishButton">I am finished</button></li>
+            </ul>
+          </div>
+
+    </div>
+
+
+
+  </div>
+
+  {% if user.supplement == 1 %}
+  <div class="row">
+    <div class="col">
+      <br>
+      <div class="card">
+          <h5 class="card-header"><i class="fa fa-forward" aria-hidden="true"></i>&nbsp Supplemental Links</h5>
+          <div class="card-body">
+              <div id="div2"></div>
+          </div>
+        </div>
+    </div>
+    <div class="col-3">
+  </div>
+
+  </div>
+
+</div>
+{% endif %}
+
+  {% endblock %}
