@@ -13,14 +13,6 @@ python venv/bin/pip install pep8 pylint
 deactivate
 
 ## To-do
-~~Integrate spark~~
-
-~~Update adminstrator's page (Mass-change lab number for all students)~~
-
-* Fix routing (admin page - get rid of user count)~~
-~~Fix 'refreshmoney' script so that it loads in portal page only~~
-* Update portal aesthetic (header/footer, login form, user edit page)
-~~Import all emails~~
 * Double check emails
 ~~Use local fontawesome instead of CDN (CDN is too slow)~~
 * Clean up configuration files for version control
