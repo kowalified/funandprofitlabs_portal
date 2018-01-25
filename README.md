@@ -1,11 +1,11 @@
-# Fun and Profit labs Portal 2.0
-Verison 2.0 of the portal used in the 'fun and (fake) profit' lab series at the [CiscoLive](https://www.ciscolive.com/global/) conference.
+# Portal 2.0 for the Fun and Profit Labs @ Ciscolive
+Verison 2.0 of the portal used in the 'fun and (fake) profit' lab series at the [CiscoLive](https://www.ciscolive.com/global/) conference. Hosted at sessions: LTRRST-1179 and LTRRST-2016.
 
 ## Install instructions
 *coming soon*
 
 ### Notes
-Ran the following in OSX to setup virtualenv to reduce errors within vscode:
+Ran the following in root folder to setup virtualenv (on OSX) to reduce errors within vscode:
 ```
 virtualenv venv
 source venv/bin/activate
