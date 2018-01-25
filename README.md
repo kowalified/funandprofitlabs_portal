@@ -2,7 +2,8 @@
 Verison 2.0 of the portal used in the 'fun and (fake) profit' lab series at the [CiscoLive](https://www.ciscolive.com/global/) conference. Hosted at sessions: LTRRST-1179 and LTRRST-2016.
 
 ## Install instructions
-*coming soon*
+Notes:
+* By default, webserver is set to run on port 8000. 
 
 ### Notes
 Ran the following in root folder to setup virtualenv (on OSX) to reduce errors within vscode:
