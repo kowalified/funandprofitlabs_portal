@@ -121,12 +121,13 @@ def signup():
     if form.validate_on_submit():
         u = User()
 
-        if form.money.data == '100':
+        form.populate_obj(u)
+
+        if form.money.data == 100:
             u.supplement = False
         else:
             u.supplement = True
 
-        form.populate_obj(u)
         ##u.password = User.encrypt_password(request.form.get('password'))
         u.save()
 

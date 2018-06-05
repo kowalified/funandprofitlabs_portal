@@ -15,6 +15,15 @@ var bulkSelectors = {
 
 $(document).ready(function() {
 
+  if (window.location.pathname == '/portal') {
+    setInterval(function() {
+      $.getJSON("portal/refreshmoney",
+              function(data) {
+                  $('#userMoney').text(data.user_money);
+              });
+}, 10000);
+    }
+
 setInterval(function() {$("#div1").load("portal/scenario");}, 20000);
 
 setInterval(function() {$("#div2").load("portal/supplement");}, 20000);

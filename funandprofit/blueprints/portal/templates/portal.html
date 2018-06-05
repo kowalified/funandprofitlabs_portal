@@ -1,18 +1,5 @@
 {% extends 'layouts/app.html' %}
 
-<head>
-{{ super() }}
-
-<script>
-  setInterval(function() {
-      $.getJSON("portal/refreshmoney",
-              function(data) {
-                  $('#userMoney').text(data.user_money);
-              });
-}, 10000);
-</script>
-
-</head>
 
 {% block body %}
 <div class="container">
@@ -26,27 +13,53 @@
           </div> 
     </div>
 
-
-
     <div class="col-3">
-
         <div class="card">
             <div class="card-header">
               HR Tools and Resources
             </div>
             <ul class="list-group list-group-flush">
               <li class="list-group-item"><div id="moneySection"><center><h2><i class="fa fa-university" aria-hidden="true"></i>
- = <i class="fa fa-eur" aria-hidden="true"></i>
+ = <i class="fa fa-usd" aria-hidden="true"></i>
                 <span id="userMoney">{{ user.money }}</span></h2></center></div></li>
               <li class="list-group-item"><button type="button" class="btn btn-danger btn-block helpButton">I need help</button></li>
               <li class="list-group-item"><button type="button" class="btn btn-success btn-block finishButton">I am finished</button></li>
+              <li class="list-group-item"> 
+                
+                  <table class="table table-striped">
+                      <thead>
+                        <tr>
+                          <th scope="col">Node</th>
+                          <th scope="col">Telnet Port</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                          <tr>
+                            <th scope="row">Edge1</th>
+                            <td>{{ ((user.student_number - 1)*8) + 30004 }}</td>
+                          </tr>
+                          <tr>
+                              <th scope="row">Edge2</th>
+                              <td>{{ ((user.student_number - 1)*8) + 30005 }}</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Core</th>
+                                <td>{{ ((user.student_number - 1)*8) + 30006 }}</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">route_server</th>
+                                <td>{{ ((user.student_number - 1)*8) + 30001 }}</td>
+                            </tr>
+                            <tr>
+                                <th scope="row"><a href="{{ url_for('static', filename='images/LTRRST1179-topology.jpg')}}" target="_blank">Topology</a></th>
+                                <td></td>
+                            </tr>
+                        </tbody>
+                      </table>
+                    </li>
             </ul>
           </div>
-
     </div>
-
-
-
   </div>
 
   {% if user.supplement == 1 %}
@@ -64,8 +77,8 @@
   </div>
 
   </div>
-
 </div>
 {% endif %}
 
   {% endblock %}
+
