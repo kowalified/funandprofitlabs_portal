@@ -2,6 +2,7 @@ version: '2'
 
 services:
   postgres:
+    restart: always
     image: 'postgres:alpine'
     env_file:
       - '.env'
@@ -11,6 +12,7 @@ services:
       - '5432:5432'
 
   website:
+    restart: always
     build: .
     command: >
       gunicorn -c "python:config.gunicorn" --reload "funandprofit.app:create_app()"
